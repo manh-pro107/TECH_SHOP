@@ -1,0 +1,126 @@
+/* ===== Layout ===== */
+body {
+    background: #f6f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* HEADER */
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* SIDEBAR */
+.sidebar-wrapper {
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* MENU */
+.metismenu {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.metismenu li {
+    margin-bottom: 8px;
+}
+
+.metismenu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #444;
+    text-decoration: none;
+}
+
+.metismenu li a:hover {
+    background: #f1f2f6;
+}
+
+.metismenu li a.active {
+    background: #ff5b2e;
+    color: #fff;
+}
+
+/* CONTENT */
+.page-wrapper {
+    margin-left: 260px;
+    margin-top: 70px;
+    padding: 15px;
+}
+
+/* CARD */
+.card {
+    border-radius: 12px;
+}
+/* ===== SIDEBAR FIX ===== */
+.sidebar-wrapper {
+    position: fixed;
+    top: 80px;              /* cách header */
+    left: 20px;             /* cách lề trái */
+    
+    width: 250px;
+    height: calc(100vh - 100px);
+
+    background: #ffffff;
+    border-radius: 20px;    /* 🔥 bo tròn lại */
+    
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    overflow-y: auto;
+}
+
+/* title Menu */
+.sidebar-wrapper::before {
+    content: "Menu";
+    display: block;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+/* menu item */
+.metismenu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 12px;
+    border-radius: 12px;   /* 🔥 bo item */
+    
+    color: #333;
+    transition: 0.2s;
+}
+
+/* hover */
+.metismenu li a:hover {
+    background: #f3f4f6;
+}
+
+/* active */
+.metismenu li a.active {
+    background: #0dcaf0;
+    color: white;
+}
